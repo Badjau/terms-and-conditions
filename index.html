@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Review and accept the Terms and Conditions.">
+  <title>Terms and Conditions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card" aria-labelledby="page-title">
+      <header class="card-header">
+        <p class="eyebrow">Agreement</p>
+        <h1 id="page-title">Terms and Conditions</h1>
+        <p class="intro">Please read the terms below, then enter your name to accept.</p>
+      </header>
+
+      <article id="terms" class="terms" aria-live="polite" aria-busy="true">
+        <p class="loading">Loading terms…</p>
+      </article>
+
+      <form id="acceptance-form" class="acceptance-form">
+        <label for="full-name">Full name</label>
+        <input
+          id="full-name"
+          name="fullName"
+          type="text"
+          autocomplete="name"
+          maxlength="120"
+          placeholder="Enter your full name"
+          required
+        >
+
+        <label class="confirmation" for="agreement">
+          <input id="agreement" name="agreement" type="checkbox" required>
+          <span>I have read and agree to these Terms and Conditions.</span>
+        </label>
+
+        <button id="accept-button" type="submit" disabled>Accept terms</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
