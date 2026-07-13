@@ -1,9 +1,13 @@
 [
   {
-    "name": "Example User",
-    "accepted": true,
-    "acceptedAt": "2026-07-13T10:00:00.000Z",
+    "submittedAt": "2026-07-13T10:00:00.000Z",
     "termsVersion": "2026-07-13",
-    "termsFile": "terms.txt"
+    "questionsVersion": "2026-07-13",
+    "answers": [
+      { "id": "fullName", "label": "Full name", "value": "Example User" },
+      { "id": "drugAlcoholInfluence", "label": "Are you under the influence of drugs and/or alcohol?", "value": "No" },
+      { "id": "communicableDiseases", "label": "Do you have communicable diseases (influenza, HIV, measles, tuberculosis, etc.)?", "value": "No" },
+      { "id": "agreement", "label": "I have read and agree to these Terms and Conditions.", "value": "Yes" }
+    ]
   }
 ]
