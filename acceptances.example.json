@@ -1,13 +1,20 @@
 [
   {
     "submittedAt": "2026-07-13T10:00:00.000Z",
-    "termsVersion": "2026-07-13",
-    "questionsVersion": "2026-07-13",
+    "termsVersion": "2026-07-13-tattoo-consent",
+    "questionsVersion": "2026-07-13-tattoo-consent",
     "answers": [
-      { "id": "fullName", "label": "Full name", "value": "Example User" },
-      { "id": "drugAlcoholInfluence", "label": "Are you under the influence of drugs and/or alcohol?", "value": "No" },
-      { "id": "communicableDiseases", "label": "Do you have communicable diseases (influenza, HIV, measles, tuberculosis, etc.)?", "value": "No" },
-      { "id": "agreement", "label": "I have read and agree to these Terms and Conditions.", "value": "Yes" }
+      { "id": "fullName", "label": "Full Name", "value": "Example User", "sectionId": "clientInformation", "sectionTitle": "Client Information" },
+      { "id": "age", "label": "Age", "value": 25, "sectionId": "clientInformation", "sectionTitle": "Client Information" },
+      { "id": "dateOfBirth", "label": "Date of Birth", "value": "01/01/2001", "sectionId": "clientInformation", "sectionTitle": "Client Information" },
+      { "id": "drugAlcoholInfluence", "label": "Are you under the influence of drugs and/or alcohol?", "value": "No", "sectionId": "preProcedureQuestionnaire", "sectionTitle": "Pre-Procedure Questionnaire" },
+      { "id": "communicableDiseases", "label": "Do you have communicable diseases (influenza, HIV, measles, tuberculosis, etc.)?", "value": "No", "sectionId": "preProcedureQuestionnaire", "sectionTitle": "Pre-Procedure Questionnaire" },
+      { "id": "skinConditionsAllergies", "label": "Do you have any skin conditions and/or allergies?", "value": "No", "sectionId": "preProcedureQuestionnaire", "sectionTitle": "Pre-Procedure Questionnaire" },
+      { "id": "pregnancyMenstruation", "label": "For female clients only: Are you pregnant or on your menstruation?", "value": "", "sectionId": "preProcedureQuestionnaire", "sectionTitle": "Pre-Procedure Questionnaire" },
+      { "id": "accuracyConfirmation", "label": "I confirm that the information I have provided in this document is accurate and true.", "value": "Yes", "sectionId": "acknowledgement", "sectionTitle": "Acknowledgement and Waiver" },
+      { "id": "signature", "label": "Client Signature Above Printed Name", "value": "Signed", "sectionId": "authorization", "sectionTitle": "Authorization" },
+      { "id": "signaturePrintedName", "label": "Printed Name", "value": "Example User", "sectionId": "authorization", "sectionTitle": "Authorization" },
+      { "id": "signedDate", "label": "Signed Date (MM/DD/YYYY)", "value": "07/13/2026", "sectionId": "authorization", "sectionTitle": "Authorization" }
     ]
   }
 ]

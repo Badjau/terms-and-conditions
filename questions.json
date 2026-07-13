@@ -1,49 +1,134 @@
 {
-  "version": "2026-07-13",
-  "submitLabel": "Submit declaration",
-  "questions": [
+  "version": "2026-07-13-tattoo-consent",
+  "submitLabel": "Submit consent form",
+  "sections": [
     {
-      "id": "fullName",
-      "type": "text",
-      "label": "Full name",
-      "placeholder": "Enter your full name",
-      "autocomplete": "name",
-      "maxLength": 120,
-      "required": true
+      "id": "clientInformation",
+      "title": "Client Information",
+      "questions": [
+        {
+          "id": "fullName",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "autocomplete": "name",
+          "maxLength": 120,
+          "required": true
+        },
+        {
+          "id": "age",
+          "type": "text",
+          "inputType": "number",
+          "label": "Age",
+          "placeholder": "Enter your age",
+          "min": 0,
+          "max": 150,
+          "step": 1,
+          "required": true
+        },
+        {
+          "id": "dateOfBirth",
+          "type": "text",
+          "inputType": "date",
+          "label": "Date of Birth",
+          "max": "today",
+          "required": true
+        }
+      ]
     },
     {
-      "id": "drugAlcoholInfluence",
-      "type": "singleChoice",
-      "label": "Are you under the influence of drugs and/or alcohol?",
-      "required": true,
-      "options": [
-        { "value": "Yes", "label": "Yes" },
-        { "value": "No", "label": "No" }
-      ],
-      "other": {
-        "label": "Other (Please specify)",
-        "placeholder": "Please specify"
-      }
+      "id": "preProcedureQuestionnaire",
+      "title": "Pre-Procedure Questionnaire",
+      "questions": [
+        {
+          "id": "drugAlcoholInfluence",
+          "type": "singleChoice",
+          "label": "Are you under the influence of drugs and/or alcohol?",
+          "required": true,
+          "options": [
+            { "value": "Yes", "label": "Yes" },
+            { "value": "No", "label": "No" }
+          ],
+          "other": { "label": "Other (Please specify)", "placeholder": "Please specify" }
+        },
+        {
+          "id": "communicableDiseases",
+          "type": "singleChoice",
+          "label": "Do you have communicable diseases (influenza, HIV, measles, tuberculosis, etc.)?",
+          "required": true,
+          "options": [
+            { "value": "Yes", "label": "Yes" },
+            { "value": "No", "label": "No" }
+          ],
+          "other": { "label": "Other (Please specify)", "placeholder": "Please specify" }
+        },
+        {
+          "id": "skinConditionsAllergies",
+          "type": "singleChoice",
+          "label": "Do you have any skin conditions and/or allergies?",
+          "required": true,
+          "options": [
+            { "value": "Yes", "label": "Yes" },
+            { "value": "No", "label": "No" }
+          ],
+          "other": { "label": "Other (Please specify)", "placeholder": "Please specify" }
+        },
+        {
+          "id": "pregnancyMenstruation",
+          "type": "singleChoice",
+          "label": "For female clients only: Are you pregnant or on your menstruation?",
+          "required": false,
+          "options": [
+            { "value": "Yes", "label": "Yes" },
+            { "value": "No", "label": "No" }
+          ],
+          "other": { "label": "Other (Please specify)", "placeholder": "Please specify" }
+        }
+      ]
     },
     {
-      "id": "communicableDiseases",
-      "type": "singleChoice",
-      "label": "Do you have communicable diseases (influenza, HIV, measles, tuberculosis, etc.)?",
-      "required": true,
-      "options": [
-        { "value": "Yes", "label": "Yes" },
-        { "value": "No", "label": "No" }
-      ],
-      "other": {
-        "label": "Other (Please specify)",
-        "placeholder": "Please specify"
-      }
+      "id": "acknowledgement",
+      "title": "Acknowledgement and Waiver",
+      "includeTerms": true,
+      "questions": [
+        {
+          "id": "accuracyConfirmation",
+          "type": "checkbox",
+          "label": "I confirm that the information I have provided in this document is accurate and true.",
+          "required": true
+        }
+      ]
     },
     {
-      "id": "agreement",
-      "type": "checkbox",
-      "label": "I have read and agree to these Terms and Conditions.",
-      "required": true
+      "id": "authorization",
+      "title": "Authorization",
+      "questions": [
+        {
+          "id": "signature",
+          "type": "signature",
+          "label": "Client Signature Above Printed Name",
+          "helpText": "Sign using your mouse, stylus, or finger.",
+          "required": true
+        },
+        {
+          "id": "signaturePrintedName",
+          "type": "text",
+          "label": "Printed Name",
+          "placeholder": "Enter your printed name",
+          "autocomplete": "name",
+          "maxLength": 120,
+          "required": true
+        },
+        {
+          "id": "signedDate",
+          "type": "text",
+          "inputType": "date",
+          "label": "Signed Date (MM/DD/YYYY)",
+          "defaultValue": "today",
+          "max": "today",
+          "required": true
+        }
+      ]
     }
   ]
 }
