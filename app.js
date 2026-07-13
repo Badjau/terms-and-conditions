@@ -2,7 +2,7 @@ const TERMS_FILE = "terms.txt";
 const QUESTIONS_FILE = "questions.json";
 const TERMS_VERSION = "2026-07-13-tattoo-consent";
 const STORAGE_KEY = "terms-and-conditions-acceptances";
-const PDF_EMAIL_ENDPOINT = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const PDF_EMAIL_ENDPOINT = "https://script.google.com/macros/s/AKfycbxcuKIVr_Lw6UU740FZSFB-WQKaCv6HCdQCyFtUsmMFPqp1rCDAaoSe9W67gcrWTsEq/exec";
 
 const form = document.querySelector("#acceptance-form");
 const questionsElement = document.querySelector("#questions");
